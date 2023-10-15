@@ -1,6 +1,6 @@
 import './App.scss';
 
-  function Card ({pokemon, evolution}) {
+  function Card ({pokemon, evolution, lastPokemon}) {
 
 
 
@@ -28,7 +28,8 @@ import './App.scss';
           </li>
         </ul>
       </div>
-      <button className='Button1' onClick={evolution}>Evolution</button>
+      {lastPokemon ? null : (<button className='Button1' onClick={evolution}>Evolution</button>
+      )}
       </div>
     
     )

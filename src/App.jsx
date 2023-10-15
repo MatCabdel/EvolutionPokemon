@@ -42,10 +42,12 @@ const App = () => {
       setPokemonIndex(pokemonIndex + 1);
   }
   
+  const lastPokemon = pokemonIndex === pokemonList.length - 1;
+
   return(
 <div>
   <h1>Mes Évolutions</h1>
-  <Card pokemon={pokemonList[pokemonIndex]} evolution={handleNextPokemon}/>
+  <Card pokemon={pokemonList[pokemonIndex]} evolution={handleNextPokemon} lastPokemon={lastPokemon}/>
 </div>
   );
 }
